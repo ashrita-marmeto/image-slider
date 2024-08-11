@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button id="hamburger">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+</button>
+<div id="drawer">
+    <div class="drawer-content">
+        <h2>Text Overlay Position</h2>
+        <div class="position-selector">
+            <select id="position-dropdown">
+                <option value="top-left">Top Left</option>
+                <option value="top-center">Top Center</option>
+                <option value="top-right">Top Right</option>
+                <option value="middle-left">Middle Left</option>
+                <option value="middle-center">Middle Center</option>
+                <option value="middle-right">Middle Right</option>
+                <option value="bottom-left">Bottom Left</option>
+                <option value="bottom-center">Bottom Center</option>
+                <option value="bottom-right">Bottom Right</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<div class="main-content">
+<div class="splide">
+    <div class="splide__track">
+        <ul class="splide__list">
+            <!-- Slides will be dynamically added here -->
+        </ul>
+    </div>
+    
+  </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="./src/index.js"></script>
+</body>
+</html>
+

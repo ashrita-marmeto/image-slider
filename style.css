@@ -1,0 +1,166 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#hamburger {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  width: 30px;
+  height: 25px;
+}
+
+#hamburger .bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+#hamburger.open .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+#hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+#hamburger.open .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+#drawer {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: #f1f1f1;
+  transition: left 0.3s ease-in-out;
+  z-index: 999;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#drawer.open {
+  left: 0;
+}
+
+.drawer-content {
+  margin-top: 60px; 
+}
+
+.position-selector {
+  margin-top: 20px;
+}
+
+#position-dropdown {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.main-content {
+  padding: 70px 20px 0 20px;
+ 
+}
+
+.splide__slide {
+  position: relative;
+  height: 600px;
+}
+
+.splide__arrow {
+  background: none;
+  top: 96%;
+  position: absolute;
+}
+
+.splide__arrow--prev {
+  left: 38%; 
+}
+
+.splide__arrow--next {
+  right: 38%;
+}
+
+.splide__arrow svg {
+  fill: white;
+}
+
+.splide__pagination {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  bottom: 16px;
+}
+
+.splide__pagination__page {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.splide__pagination__page.is-active {
+  width: 25px;
+  height: 8px;
+  border-radius: 5px;
+  background-color: #ccc;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.slide-content {
+  position: absolute;
+  padding: 20px;
+  color: white;
+  max-width: 50%;
+}
+
+.slide-content h2 {
+  margin: 20px 0 20px 0;
+  font-size: 32px;
+}
+
+.slide-content p {
+  margin: auto;
+  border: 1px solid #fff;
+  width: fit-content;
+  padding: 5px 20px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.15); 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); 
+  filter: blur(0.5px); 
+}
+
+.slide-content p::before {
+  content: " • ";
+  color: #fff;
+  padding-right: 4px;
+}
+
+.slide-content a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  border-radius: 20px;
+}
